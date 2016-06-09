@@ -12,8 +12,8 @@ import VideoListItem from './video_list_item';
 // export default VideoList;
 
 const VideoList = (props) => {
-  const videoItems = props.videos.map((video) => {
-    return <VideoListItem video={video} />;
+  const videoItems = props.videos.map(function(video) {
+    return <VideoListItem key={video.etag} video={video} />;
   });
 
   return (
